@@ -1,11 +1,13 @@
 import React from 'react';
 import ExpenseList from '../ExpenseList/ExpenseList';
 import ExpenseListFilters from '../ExpenseList/ExpenseListFilters';
+import ExpensesSummary from '../ExpensesSummary/ExpensesSummary';
 
 const ExpenseDashboardPg = () => (
     <div>
-      <ExpenseListFilters></ExpenseListFilters>
-      <ExpenseList></ExpenseList>
+      <ExpensesSummary />
+      <ExpenseListFilters />
+      <ExpenseList />
     </div>
   );
 
