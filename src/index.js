@@ -7,7 +7,6 @@ import { Provider } from 'react-redux';
 import { createStore, combineReducers } from 'redux';
 import expensesReducer from './store/reducers/expenses';
 import filtersReducer from './store/reducers/filters';
-import {addExpense} from './store/actions/expenses';
 
 const rootReducer = combineReducers({
     expenses: expensesReducer,
@@ -16,10 +15,6 @@ const rootReducer = combineReducers({
 
 // Creating the Store
 const store = createStore(rootReducer, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
-
-store.dispatch(addExpense({ description: 'Water Bill', amount: 4500}));
-store.dispatch(addExpense({ description: 'Gas Bill', createdAt: 1000}));
-store.dispatch(addExpense({ description: 'Rent', amount: 1500}));
 
 const app = (
     <Provider store={store}>
