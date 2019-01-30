@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import moment from 'moment';
 import { SingleDatePicker } from 'react-dates';
 import 'react-dates/lib/css/_datepicker.css';
+import '../ExpenseList/ExpenseListFilters.css';
 
 class ExpenseForm extends Component {
     constructor(props) {
@@ -64,19 +65,20 @@ class ExpenseForm extends Component {
 
     render() {
         return(
-            <div>
-                {this.state.error && <p>{this.state.error}</p>}
-                <form onSubmit={this.onSubmit}>
+                <form className="form" onSubmit={this.onSubmit}>
+                {this.state.error && <p className="form__error">{this.state.error}</p>}
                     <input 
                         type="text"
                         placeholder="Description"
                         autoFocus
+                        className="text-input"
                         value={this.state.description}
                         onChange={this.onDescriptionChange}
                     />
                     <input
                         type="text"
                         placeholder="Amount"
+                        className="text-input"
                         value={this.state.amount}
                         onChange={this.onAmountChange}
                     />
@@ -90,14 +92,16 @@ class ExpenseForm extends Component {
                         id='calendar_id_one'
                     />
                     <textarea 
-                        placeholder="Additional Notes (Optional)"
+                        placeholder="Additional notes (optional)"
+                        className="textarea"
                         value={this.state.notes}
                         onChange={this.onNotesChange}
                     />
-                    <button>Add Expense</button>
+                    <div>
+                        <button className="button-add">Save Expense</button>
+
+                    </div>
                 </form>
-                ExpenseForm
-            </div>
         )
     }
 };

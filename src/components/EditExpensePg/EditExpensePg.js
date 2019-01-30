@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import { connect } from 'react-redux';
 import ExpenseForm from '../ExpenseForm/ExpenseForm';
 import { editExpense, startRemoveExpense } from '../../store/actions/expenses';
+import './EditExpensePg.css';
 
 class EditExpensePg extends Component {
   
@@ -18,11 +19,18 @@ class EditExpensePg extends Component {
   render() {
       return (
         <div>
-          <ExpenseForm
-            expense={this.props.expense} 
-            onSubmit={this.onSubmit}
-          />
-          <button onClick={this.onRemove}>Remove</button>
+          <div className="page-header">
+            <div className="content-container">
+              <h1 className="page-header__title">Edit Expense</h1>
+            </div>
+          </div>
+          <div className="content-container">
+            <ExpenseForm
+              expense={this.props.expense} 
+              onSubmit={this.onSubmit}
+            />
+          <button className="button-remove" onClick={this.onRemove}>Remove Expense</button>
+          </div>
         </div>
       );
     }

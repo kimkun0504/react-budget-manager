@@ -1,0 +1,42 @@
+.content-container{
+    margin: 0 auto;
+    padding: 0 1.6rem;
+    max-width: 80rem;
+}
+
+.page-header {
+    background: #f7f7f7;
+    margin-bottom: 3.2rem;
+    padding: 3.2rem 0;
+}
+
+.page-header__title {
+    font-weight: 300;
+    margin: 0;   
+}
+
+.page-header__title span {
+    font-weight: 700;
+}
+
+.page-header__actions {
+    margin-top: 1.6rem;
+
+}
+
+.button-add {
+    background: #1c88bf;
+    border: none;
+    color: white;
+    font-size: 1.7rem;
+    font-weight: 300;
+    padding: 1.2rem;
+    line-height: 1;
+    display: inline-block;
+    text-decoration: none;
+    transition: background-color 0.3s ease-out;
+}
+
+.button-add:hover {
+    background-color: #116f9e;
+}

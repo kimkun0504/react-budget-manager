@@ -14,6 +14,7 @@ import { firebase } from './firebase/firebase';
 import { history } from './routers/AppRouter';
 import authReducer from './store/reducers/auth';
 import { login, logout } from './store/actions/auth';
+import LoadingPage from './components/LoadingPage/LoadingPage';
 
 
 
@@ -43,7 +44,7 @@ const renderApp = () => {
     }
 };
 
-ReactDOM.render( <p>Loading...</p> , document.getElementById('root'));
+ReactDOM.render( <LoadingPage></LoadingPage> , document.getElementById('root'));
 
 firebase.auth().onAuthStateChanged((user) => {
     if (user) {

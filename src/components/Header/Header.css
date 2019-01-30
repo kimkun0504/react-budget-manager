@@ -1,0 +1,38 @@
+.header {
+    background: #364051;
+}
+
+.header__title {
+    color: white;
+    text-decoration: none;
+}
+
+.header__title h1 {
+    margin: 0;
+}
+
+.content-container {
+    margin: 0 auto;
+    padding: 0 1.6rem;
+    max-width: 80rem;
+}
+
+.header__content {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 1.2rem 0;
+}
+
+.button-link {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.7rem;
+    font-weight: 300;
+    padding: 1.2rem;
+    line-height: 1;
+    display: inline-block;
+    text-decoration: none;
+    transition: background-color 0.3s ease-out;
+}
