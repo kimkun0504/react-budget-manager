@@ -5,11 +5,9 @@ import { startLogout } from '../../store/actions/auth';
 
 const Header = ({startLogout}) => (
     <header>
-      <h1>React Budget Manager</h1>
-      <NavLink to="/" activeClassName="is-active" exact={true}>Dashboard</NavLink> 
+      <h1>Trck Expense</h1>
+      <NavLink to="/dashboard" activeClassName="is-active">Dashboard</NavLink> 
       <NavLink to="/create" activeClassName="is-active">Create Expense</NavLink> 
-      {/* <NavLink to="/edit" activeClassName="is-active">Edit Expense</NavLink>  */}
-      {/* <NavLink to="/help" activeClassName="is-active">Help</NavLink>  */}
       <button onClick={startLogout}>Logout</button>
     </header>
   );
