@@ -4,6 +4,7 @@ import ExpenseForm from '../ExpenseForm/ExpenseForm';
 import { editExpense, startRemoveExpense } from '../../store/actions/expenses';
 
 class EditExpensePg extends Component {
+  
   onSubmit = (expense) => {
     this.props.editExpense(this.props.expense.id, expense);
     this.props.history.push('/');
@@ -25,16 +26,15 @@ class EditExpensePg extends Component {
         </div>
       );
     }
-  };
+};
+
+const mapStateToProps = (state, props) => ({
+  expense: state.expenses.find((expense) => expense.id === props.match.params.id)
+})
+
 const mapDispatchToProps = (dispatch, props) => ({
   editExpense: (id, expense) => dispatch(editExpense(id, expense)),
-  startRemoveExpense: (data) => dispatch(startRemoveExpense(data)),
+  startRemoveExpense: (data) => dispatch(startRemoveExpense(data))
 });
-
-const mapStateToProps = (state, props) => {
-  return {
-    expense: state.expenses.find((expense) => expense.id === props.match.params.id)
-  };
-};
 
 export default connect(mapStateToProps, mapDispatchToProps)(EditExpensePg);
