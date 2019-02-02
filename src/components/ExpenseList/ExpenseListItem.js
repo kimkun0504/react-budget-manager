@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import moment from 'moment';
 import numeral from 'numeral';
-import './ExpenseListFilters.css';
+import '../../App.css';
 
 const ExpenseListItem = ({ id, description, amount, createdAt }) => (
         <Link className="list-item" to={`/edit/${id}`}> 

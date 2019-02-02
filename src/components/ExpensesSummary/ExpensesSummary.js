@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import numeral from 'numeral';
 import selectExpenses from '../../selectors/expenses';
 import selectExpensesTotal from '../../selectors/expenses-total';
-import './ExpensesSummary.css';
+import '../../App.css';
 
 const ExpensesSummary = ({ expenseCount, expensesTotal }) => {
     const expenseWord = expenseCount === 1 ? 'expense' : 'expenses';
@@ -14,7 +14,7 @@ const ExpensesSummary = ({ expenseCount, expensesTotal }) => {
             <div className="content-container ">
                 <h1 className="page-header__title">Viewing <span>{expenseCount}</span> {expenseWord} totalling <span>{formattedExpenseTotal}</span></h1>
                 <div className="page-header__actions">
-                    <Link className="button-add" to="/create">Add Expense</Link>    
+                    <Link className="button--add" to="/create">Add Expense</Link>    
                 </div> 
             </div>
         </div>

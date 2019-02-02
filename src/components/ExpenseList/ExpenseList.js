@@ -2,7 +2,7 @@ import React from 'react';
 import ExpenseListItem from './ExpenseListItem';
 import SelectExpenses from '../../selectors/expenses';
 import { connect } from 'react-redux';
-import './ExpenseListFilters.css';
+import '../../App.css';
 
 const ExpenseList = (props) => (
     <div className="content-container">

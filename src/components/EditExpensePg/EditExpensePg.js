@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import { connect } from 'react-redux';
 import ExpenseForm from '../ExpenseForm/ExpenseForm';
 import { editExpense, startRemoveExpense } from '../../store/actions/expenses';
-import './EditExpensePg.css';
+import '../../App.css';
 
 class EditExpensePg extends Component {
   

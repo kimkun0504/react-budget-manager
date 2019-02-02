@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import { connect } from 'react-redux';
 import { setTextFilter, sortByDate, sortByAmount, setStartDate, setEndDate } from '../../store/actions/filters';
 import {DateRangePicker} from 'react-dates';
-import './ExpenseListFilters.css';
+import '../../App.css';
 
 class ExpenseListFilters extends Component {
     state = {

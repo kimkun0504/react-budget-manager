@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import { connect } from 'react-redux';
 import ExpenseForm from '../ExpenseForm/ExpenseForm';
 import { startAddExpense } from '../../store/actions/expenses';
-import './AddExpensePg.css';
+import '../../App.css';
 
 export class AddExpensePg extends Component {
   onSubmit = (expense) => {
